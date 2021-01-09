@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Scripts inside HTML</title>
+
+
+    <script>
+        /***********
+         * Scripts could be two types 
+         * - Internal 
+         * - External 
+         ***********/
+    </script>
+
+
+    <script>
+        /*************
+         * This Script is external it written is separate file.
+         * "src" prop defines a link to the source of the code.
+         ************/
+    </script>
+    <script src="main.js"></script>
+
+
+    <script>
+        /*************
+         * To connect another script you have to open new <script> tag
+         ************/
+    </script>
+    <script src="secondScript.js"></script>
+
+
+    <script>
+        /*************
+         * It is impossible to write both External and Internal scripts in one <script> tag
+         * If 'scr' is used Internal script will be automatically skipped
+         * For each new script you have to open new <script> tag
+         ************/
+    </script>
+    <script src="main.js">
+        alert("This code does not work!!!") // This part of code ignored
+    </script>
+</head>
+
+<body>
+    <p>Script after this....</p>
+
+    <script>
+        /*********
+         * This Script is internal it is written inside of html code 
+         * between <script> tags
+        ***********/
+        alert("Internal Script");
+    </script>
+
+    <p>....Script before this.</p>
+</body>
+
+
+
+</html>
